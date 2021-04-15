@@ -1,7 +1,7 @@
 {
   "name": "waveorb-examples",
   "version": "0.1.0",
-  "description": "Waveorb examples",
+  "description": "Examples of use for the Waveorb Web App Development Framework",
   "scripts": {
     "dev": "npm run clear:css && npm run build:css && concurrently -n 🔥,💗 \"npm run watch:app\" \"npm run watch:css\"",
     "watch:app": "nodemon -e js,mjs,json,yml,css,md -i dist -x waveorb serve",
