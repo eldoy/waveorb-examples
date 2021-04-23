@@ -1,3 +1,4 @@
+// Mongodb setup
 const db = require('mongowave')
 
 module.exports = async function(app) {

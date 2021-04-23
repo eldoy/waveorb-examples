@@ -26,6 +26,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lowtide": "^0.1.4",
+    "mongowave": "^0.2.1",
     "sass": "^1.32.8",
     "waveorb": "^0.14.11"
   },
