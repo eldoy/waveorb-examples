@@ -1,6 +1,5 @@
-// Mongodb setup
-const db = require('mongowave')
+const connection = require('mongowave')
 
 module.exports = async function(app) {
-  app.db = await db({ name: '5ono-server' })
+  app.db = await connection(app.config.db)
 }

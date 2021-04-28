@@ -1,7 +1,6 @@
+domain: mailgun-domain
+key: mailgun-key
 options:
-  reply: hello@example.com
-  from: hello@example.com
-  to: hello@example.com
-mailgun:
-  domain: example.com
-  key: YOUR_MAILGUN_API_KEY
+  reply: Example <mail@example.com>
+  from: Example <mail@example.com>
+  to: Example <mail@example.com>
