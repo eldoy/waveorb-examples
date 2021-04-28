@@ -13,7 +13,7 @@ module.exports = async function ($) {
         }
       }
     )
-    html('.user-image', `<img class="hq-profile-image" src="${esc(result.image)}">`)
+    html('.user-image', `<img class="profile-image" src="${esc(result.image)}">`)
   }
 
   async function handleSaveUser(button) {
@@ -50,77 +50,77 @@ module.exports = async function ($) {
     html(
       '#settings',
       /* html */ `
-      <div class="user-image"><img class="hq-profile-image" src="${image}"></div>
+      <div class="user-image"><img class="profile-image" src="${image}"></div>
       <input type="file" onchange="handleUpload(this)">
 
       <h4>${$.t('settings.update_profile')}</h4>
       <form onsubmit="return false">
-        <div class="hq-field">
+        <p>
           <label for="name">${$.t('signup.form.name')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="name" name="name" type="text" value="${esc(user.name)}" oninput="clearErrors(this)">
-          <span class="hq-errors name-errors"></span>
-        </div>
-        <div class="hq-field">
+          <em class="name-errors"></em>
+        </p>
+        <p>
           <label for="email">${$.t('settings.email')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="email" type="email" name="email" value="${esc(user.email)}" oninput="clearErrors(this)">
-          <span class="hq-errors email-errors"></span>
-        </div>
-        <div class="hq-field">
+          <em class="email-errors"></em>
+        </p>
+        <p>
           <label for="homepage">${$.t('profile.homepage')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="homepage" type="text" name="homepage" value="${esc(user.homepage)}" oninput="clearErrors(this)">
-          <span class="hq-errors homepage-errors"></span>
-        </div>
-        <div class="hq-field -wide">
+          <em class="homepage-errors"></em>
+        </p>
+        <p>
           <label for="about">${$.t('layouts.nav.about')}</label>
           <br>
           <textarea id="about" name="about" oninput="clearErrors(this)">${esc(user.about)}</textarea>
-          <span class="hq-errors about-errors"></span>
-        </div>
-        <div class="hq-field -wide">
+          <em class="about-errors"></em>
+        </p>
+        <p>
           <label for="address">${$.t('settings.address')}</label>
           <br>
           <textarea id="address" name="address" oninput="clearErrors(this)">${esc(user.address)}</textarea>
-          <span class="hq-errors address-errors"></span>
-        </div>
-        <div class="hq-form-buttons">
-          <button class="hq-button" onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
-        </div>
+          <em class="address-errors"></em>
+        </p>
+        <p>
+          <button onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
+        </p>
       </form>
 
       <h4>${$.t('settings.header_update')}</h4>
       <form onsubmit="return false">
-        <div class="hq-field">
+        <p>
           <label for="current">${$.t('settings.current_password')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="current" type="password" name="current" oninput="clearErrors(this)">
-          <span class="hq-errors current-errors"></span>
-        </div>
-        <div class="hq-field">
+          <em class="current-errors"></em>
+        </p>
+        <p>
           <label for="password">${$.t('settings.new_password')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="password" type="password" name="password" oninput="clearErrors(this)">
-          <span class="hq-errors password-errors"></span>
-        </div>
-        <div class="hq-form-buttons">
-          <button class="hq-button" onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
-        </div>
+          <em class="password-errors"></em>
+        </p>
+        <p>
+          <button onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
+        </p>
       </form>
       <h4>${$.t('settings.delete_user')}</h4>
       <form onsubmit="return false">
-        <div class="hq-field">
+        <p>
           <label class="warning-label">${$.t('settings.warning')}</label>
-        </div>
-        <div class="hq-form-buttons">
-          <button class="hq-button" onclick="handleDeleteUser(this)">${$.t('settings.delete_user')}</button>
-        </div>
+        </p>
+        <p>
+          <button onclick="handleDeleteUser(this)">${$.t('settings.delete_user')}</button>
+        </p>
       </form>
     `
     )

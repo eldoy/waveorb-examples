@@ -22,30 +22,30 @@ module.exports = async function ($) {
 
   return /* html */ `
     <form class="signup-form" onsubmit="return false">
-      <div class="hq-field">
+      <p>
         <label for="name">${$.t('signup.form.name')}</label>
-        <span class="hq-star" title="required">*</span>
+        <span class="star" title="required">*</span>
         <br>
         <input id="name" name="name" type="text" oninput="clearErrors(this)">
-        <span class="hq-errors name-errors"></span>
-      </div>
-      <div class="hq-field">
+        <em class="name-errors"></em>
+      </p>
+      <p>
         <label for="email">${$.t('signup.form.email')}</label>
-        <span class="hq-star" title="required">*</span>
+        <span class="star" title="required">*</span>
         <br>
         <input id="email" name="email" type="text" oninput="clearErrors(this)">
-        <span class="hq-errors email-errors"></span>
-      </div>
-      <div class="hq-field">
+        <em class="email-errors"></em>
+      </p>
+      <p>
         <label for="password">${$.t('signup.form.password')}</label>
-        <span class="hq-star" title="required">*</span>
+        <span class="star" title="required">*</span>
         <br>
         <input id="password" name="password" type="password" oninput="clearErrors(this)">
-        <span class="hq-errors password-errors"></span>
-      </div>
-      <div class="hq-form-buttons">
-        <button class="hq-button" onclick="handleSignup(this)">${$.t('signup.form.button')}</button>
-      </div>
+        <em class="password-errors"></em>
+      </p>
+      <p>
+        <button onclick="handleSignup(this)">${$.t('signup.form.button')}</button>
+      </p>
     </form>
     <p>
       ${$.t('signup.account')}

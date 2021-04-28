@@ -16,16 +16,16 @@ module.exports = async function ($) {
 
   return /* html */ `
     <form onsubmit="return false">
-      <div class="hq-field">
+      <p>
         <label for="email">${$.t('forgot.email')}</label>
-        <span class="hq-star" title="required">*</span>
+        <span class="star" title="required">*</span>
         <br>
         <input id="email" type="text" name="email" oninput="clearErrors(this)">
-        <span class="hq-errors email-errors"></span>
-      </div>
-      <div class="hq-form-buttons">
-        <button class="hq-button" onclick="handleForgot(this)">${$.t('forgot.submit')}</button>
-      </div>
+        <em class="email-errors"></em>
+      </p>
+      <p>
+        <button onclick="handleForgot(this)">${$.t('forgot.submit')}</button>
+      </p>
     </form>
     <p>
       <a href="${$.link('login')}">${$.t('forgot.back')}</a>

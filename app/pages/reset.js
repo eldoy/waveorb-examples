@@ -35,16 +35,16 @@ module.exports = async function ($) {
     <h1>${$.t('reset.header')}</h1>
     <p class="verify-key">${$.t('reset.verify')}</p>
     <form onsubmit="handleUpdate(this);return false" style="display: none">
-      <div class="hq-field">
+      <p>
         <label for="password">${$.t('reset.password')}</label>
-        <span class="hq-star" title="required">*</span>
+        <span class="star" title="required">*</span>
         <br>
         <input id="password" name="password" type="password" oninput="clearErrors(this)">
-        <span class="hq-errors password-errors"></span>
-      </div>
-      <div class="hq-form-buttons">
-        <button class="hq-button">${$.t('reset.update')}</button>
-      </div>
+        <em class="password-errors"></em>
+      </p>
+      <p>
+        <button>${$.t('reset.update')}</button>
+      </p>
     </form>
     <script>var key;(${handleReset}());${handleUpdate}</script>
   `

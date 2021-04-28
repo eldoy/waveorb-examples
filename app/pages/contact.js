@@ -17,30 +17,30 @@ module.exports = async function ($) {
     <div id="page-contact">
       <h1>${$.t('contact.header')}</h1>
       <form class="support-form" onsubmit="return false">
-        <div class="hq-field">
+        <p>
           <label for="email">${$.t('contact.email')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="email" name="email" type="email" oninput="clearErrors(this)">
-          <span class="hq-errors email-errors"></span>
-        </div>
-        <div class="hq-field">
+          <em class="email-errors"></em>
+        </p>
+        <p>
           <label for="subject">${$.t('contact.subject')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="subject" name="subject" type="text" oninput="clearErrors(this)">
-          <span class="hq-errors subject-errors"></span>
-        </div>
-        <div class="hq-field -wide">
+          <em class="subject-errors"></em>
+        </p>
+        <p>
           <label for="content">${$.t('contact.message')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <textarea id="content" name="content" oninput="clearErrors(this)"></textarea>
-          <span class="hq-errors content-errors"></span>
-        </div>
-        <div class="hq-form-buttons">
-          <button class="hq-button" onclick="handleSubmit(this)">${$.t('contact.send')}</button>
-        </div>
+          <em class="content-errors"></em>
+        </p>
+        <p>
+          <button onclick="handleSubmit(this)">${$.t('contact.send')}</button>
+        </p>
       </form>
     </div>
     <script>${handleSubmit}</script>

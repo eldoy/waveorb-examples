@@ -24,26 +24,26 @@ module.exports = async function ($) {
   return /* html */ `
     <div id="page-login">
       <form class="login-form" onsubmit="return false">
-        <div class="hq-field">
+        <p>
           <label for="email">${$.t('login.form.email')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="email" name="email" type="email" oninput="clearErrors(this)">
-          <span class="hq-errors email-errors"></span>
-        </div>
-        <div class="hq-field">
+          <em class="email-errors"></em>
+        </p>
+        <p>
           <label for="password">${$.t('login.form.password')}</label>
-          <span class="hq-star" title="required">*</span>
+          <span class="star" title="required">*</span>
           <br>
           <input id="password" name="password" type="password" oninput="clearErrors(this)">
-          <span class="hq-errors password-errors"></span>
-        </div>
-        <div class="hq-form-buttons">
-          <button class="hq-button" onclick="handleLogin(this)">
+          <em class="password-errors"></em>
+        </p>
+        <p>
+          <button onclick="handleLogin(this)">
             ${$.t('login.form.button')}
           </button>
           <a href="${$.link('forgot')}">${$.t('login.forgot')}</a>
-        </div>
+        </p>
       </form>
       <p>
         ${$.t('login.no_account')}
