@@ -7,7 +7,7 @@ module.exports = async function ($) {
       cookie('flash', $.t('reset.error'))
       location = $.link('forgot')
     } else {
-      var result = await api({ action: 'v1/reset/create', values: { key } })
+      var result = await api({ action: 'reset/create', values: { key } })
       if (result.error) {
         cookie('flash', result.error.message)
         location = $.link('forgot')
@@ -22,7 +22,7 @@ module.exports = async function ($) {
 
   async function handleUpdate(form) {
     var password = serialize(form).password
-    var result = await api({ action: 'v1/reset/update', query: { key, password } })
+    var result = await api({ action: 'reset/update', query: { key, password } })
     if (result.error) {
       showErrors(result)
     } else {

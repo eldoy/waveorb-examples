@@ -1,5 +1,6 @@
 bundle:
   js:
+    - /js/trix.js
     - /js/haka.js
     - /js/waveorb.js
     - /js/app.js

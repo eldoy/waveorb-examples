@@ -4,7 +4,7 @@ module.exports = async function ($) {
   async function handleSubmit(button) {
     button.disabled = true
     var values = serialize(button.form)
-    var result = await api({ action: 'v1/contact/create', values })
+    var result = await api({ action: 'contact/create', values })
     if (result.error) {
       showErrors(result)
     } else {

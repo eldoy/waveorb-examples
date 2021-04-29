@@ -5,7 +5,7 @@ module.exports = async function ($) {
   async function handleForgot(button) {
     button.disabled = true
     var values = serialize(button.form)
-    var result = await api({ action: 'v1/reset/create', values })
+    var result = await api({ action: 'reset/create', values })
     if (result.error) {
       button.disabled = false
       return showErrors(result)

@@ -45,7 +45,7 @@ function showErrors(result, options = {}) {
 async function cache(name, id) {
   var doc = store(`${name}-cache`)
   async function get() {
-    doc = await api({ action: `v1/${name}/get`, query: { id } })
+    doc = await api({ action: `${name}/get`, query: { id } })
     store(`${name}-cache`, doc)
   }
   if (!doc || doc.id != id) {
@@ -92,7 +92,7 @@ async function handleEditorUpload(event, config) {
   if (!config) config = { resize: [1220, 'auto'] }
   var attachment = event.attachment
   if (!attachment || !attachment.file) return
-  var result = await api({ action: 'v1/upload/create', config }, { files: [attachment.file] })
+  var result = await api({ action: 'upload/create', config }, { files: [attachment.file] })
   if (result.error) {
     return flash(result.error.message, { scroll: false, class: 'error' })
   }

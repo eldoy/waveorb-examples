@@ -4,7 +4,7 @@ module.exports = async function ($) {
 
   async function handleUpload(input) {
     var result = await api(
-      { action: 'v1/user/upload' },
+      { action: 'user/upload' },
       {
         files: input.files,
         progress: function (event) {
@@ -19,7 +19,7 @@ module.exports = async function ($) {
   async function handleSaveUser(button) {
     button.disabled = true
     var values = serialize(button.form)
-    var result = await api({ action: 'v1/user/update', query: { id: user.id }, values })
+    var result = await api({ action: 'user/update', query: { id: user.id }, values })
     if (result.error) {
       showErrors(result)
     } else {
@@ -31,7 +31,7 @@ module.exports = async function ($) {
   async function handleDeleteUser(button) {
     if (confirm($.t('settings.confirm'))) {
       button.disabled = true
-      var result = await api({ action: 'v1/user/delete', query: { id: user.id } })
+      var result = await api({ action: 'user/delete', query: { id: user.id } })
       if (result.error) {
         flash(result.error.message)
       } else {
@@ -45,7 +45,7 @@ module.exports = async function ($) {
 
   async function renderSettings() {
     var token = cookie('login')
-    user = await api({ action: 'v1/user/get', query: { token } })
+    user = await api({ action: 'user/get', query: { token } })
     var image = esc(user.image) || `https://gravatar.com/avatar/${esc(user.md5)}`
     html(
       '#settings',

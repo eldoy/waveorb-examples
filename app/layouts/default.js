@@ -3,6 +3,31 @@ module.exports = async function($) {
     ? 'https://waveorb.com/api'
     : 'http://localhost:5000'
 
+  async function handleLogout() {
+    const token = cookie('login')
+    if (token) {
+      var result = await api({ action: 'v1/login/delete', query: { token } })
+      if (result.error) {
+        return flash(result.error.message)
+      }
+      cookie('login', null)
+      cookie('flash', $.t('layouts.logout'))
+      location = $.link('index')
+    }
+  }
+
+  function init() {
+    var u = cookie('login')
+    document.querySelectorAll('#header a').forEach(function (a) {
+      if ((u && a.classList.contains('pub')) || (!u && a.classList.contains('user'))) {
+        a.style.display = 'none'
+      }
+      if (a.pathname == location.pathname) {
+        a.classList.add('active')
+      }
+    })
+  }
+
   return /* html */`
     <!doctype html>
     <html lang="${$.lang}">
@@ -22,7 +47,11 @@ module.exports = async function($) {
           <nav>
             <a href="${$.link('index')}">Home</a>
             <a href="${$.link('about')}">About</a>
+            <a class="pub" href="${$.link('signup')}">Signup</a>
+            <a class="pub" href="${$.link('login')}">Login</a>
+            <a class="admin" href="javascript:void(0)" onclick="handleLogout();return false">Logout</a>
           </nav>
+          <script>${init};init()</script>
         </header>
         <script>
           toggleVisibility()
@@ -33,7 +62,10 @@ module.exports = async function($) {
         <footer>
           Made by <a href="https://eldoy.com">Eldøy Projects</a>, Oslo, Norway
         </footer>
-        <script>flash()</script>
+        <script>
+          flash()
+          ${handleLogout}
+        </script>
       </body>
     </html>
   `

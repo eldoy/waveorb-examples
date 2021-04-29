@@ -1,0 +1,44 @@
+#dialog-layout {
+  padding: 16px;
+  margin: 50px 0;
+
+  .dialog {
+    margin: 0 auto;
+    padding: 10px 20px 20px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 220px;
+    border-radius: 5px;
+    text-align: left;
+    border: 1px solid var(--medium-gray);
+    box-shadow: 0 0 10px var(--medium-gray);
+    background-color: #fff;
+    @media (max-width: 800px) {
+      padding: 16px;
+      max-width: 600px;
+    }
+    h1:first-of-type {
+      margin: 0;
+      padding: 10px 0;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--main-dark);
+      @media (max-width: 600px) {
+        font-size: 28px;
+      }
+    }
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      border-bottom: solid 1px var(--medium-gray);
+      background-color: #fff;
+      margin-bottom: 24px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.settings h4 {
+  color: var(--danger);
+}

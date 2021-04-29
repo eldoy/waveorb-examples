@@ -5,12 +5,12 @@ module.exports = async function ($) {
   async function handleSignup(button) {
     button.disabled = true
     var values = serialize(button.form)
-    var result = await api({ action: 'v1/user/create', values })
+    var result = await api({ action: 'user/create', values })
     if (result.error) {
       button.disabled = false
       return showErrors(result)
     }
-    result = await api({ action: 'v1/login/create', values })
+    result = await api({ action: 'login/create', values })
     if (result.error) {
       button.disabled = false
       return showErrors(result)

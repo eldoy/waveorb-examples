@@ -3,7 +3,7 @@ module.exports = async function ($) {
 
   async function handleUpload(input) {
     var urls = await api(
-      { action: 'v1/upload/create' },
+      { action: 'upload/create' },
       {
         files: input.files,
         progress: function (event) {
