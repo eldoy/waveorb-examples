@@ -21,246 +21,393 @@ actions:
     description: CrowdfundHQ site activation
   login:
     create_user:
-      user_already_exists: user already exists
-    create_session:
-      user_not_found: user not found
+      email_already_exists: email already exists
+    create_login:
+      email_not_found: email not found
       password_not_valid: password is not valid
     forgot_password:
-      user_not_found: user not found
+      email_not_found: email not found
 
 # LAYOUTS
 layouts:
   description: CrowdfundHQ - Create your own crowdfunding site
   title: CrowdfundHQ
   nav:
-    home: Home
+    menu: Menu
+    close: Close
+    search: Search
     about: About
     terms: Terms
     privacy: Privacy
     contact: Contact
-    upload: Upload
     signup: Signup
     login: Login
     profile: Profile
-    settings: Settings
     logout: Logout
   logout: You have been logged out
 
-# MAILS
-mails:
-  signup:
-    subject: Welcome
-    header: Hello!
-    intro: Good luck using our incredible app!
-  reset:
-    subject: Reset password
-    header: Reset password
-  contact:
-    subject: New contact message
+# EDITOR
+editor:
+  attachFiles: Attach Files
+  bold: Bold
+  bullets: Bullets
+  byte: Byte
+  bytes: Bytes
+  captionPlaceholder: Add a caption…
+  code: Code
+  heading1: Heading
+  indent: Increase Level
+  italic: Italic
+  link: Link
+  numbers: Numbers
+  outdent: Decrease Level
+  quote: Quote
+  redo: Redo
+  remove: Remove
+  strike: Strikethrough
+  undo: Undo
+  unlink: Unlink
+  url: URL
+  urlPlaceholder: Enter a URL…
+  GB: GB
+  KB: KB
+  MB: MB
+  PB: PB
+  TB: TB
 
 # PAGES
-pages:
-  about:
-    title: About
-    header: About
-    intro: CrowdfundHQ is everything you need to develop fast, future proof, advanced applications.
-    read_more: Read more
-    link_text: about CrowdfundHQ here.
-  contact:
-    title: Contact
-    header: Contact
-    message: Thank you for your message!
-    sub_message: We will get back to you as soon as possible
-    new_message: Write another message
-    email_label: Email
-    subject_label: Subject
-    message_label: Message
-    send: Send
-    back: Back to login
-    confirmation: We've sent you a login link, please check your email
-  forgot:
-    title: Forgot
-    header: Forgot password
-    email_label: Email
-    submit: Submit
-    back: Back to login
-    confirmation: Instructions have been sent to your email
-  index:
-    title: Home
-    header: Start your own crowdfunding web site
-    intro: "No credit card needed. 14 days free."
-    header1: Why use CrowdfundHQ?
-    sub_header1: Ease of use
-    text1: Build web apps using HTML, Javascript and CSS, or just create a backend service.
-    sub_header2: Standard technologies
-    text2: The simplicity of our technology stack makes sure your app never expires.
-    sub_header3: Make your site visible
-    text3: Go serverless with pre-built static HTML pages, fully Jamstack compliant.
-    sub_header4: Flexibility
-    text4: Integrate CrowdfundHQ into your existing web site or build one from scratch.
-    header2: Ready to give it a try?
-    text5: Signing up and trying the platform is totally free.
-    signup: Sign me up
-    get_started: Get started now
-  login:
-    title: Login
-    header: Login
-    form:
-      email: Email
-      password: Password
-      button: Log in
-    noaccount: Don't have an account yet?
-    signup: Go to signup
-    forgot: Forgot your password?
-    welcome: Welcome to CrowdfundHQ
-  privacy:
-    title: Privacy
-    header: Privacy
-    section1: SECTION 1
-    general: GENERAL
-    paragraph1: CrowdfundHQ collects e-mail addresses of people who send us e-mail. We also collect information on what pages users access and information provided to us by users via surveys and site registrations. Such information may contain personal data about you including your address, phone numbers, etc. We are not allowed to disclose such personal information without your written permission.
-    paragraph2: However, certain information collected from you and about you is used within the context of providing the Service. The information we collect is not shared with or sold to others except under the certain circumstances and which your use of the Service is deemed to provide to us a valid consent to disclose the following
-    paragraph3:
-      In order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of CrowdfundHQ’s terms of use, or as otherwise required by law.
-      CrowdfundHQ does not rent, sell, or share personal information about you with other companies except to provide products or services you’ve requested or when we have your permission.
-      We will transfer information about you if CrowdfundHQ is acquired by or merged with another company. In this event, CrowdfundHQ will notify you by email or by putting a prominent notice on the CrowdfundHQ web site before information about you is transferred and becomes subject to a different privacy policy.
-      Everyday language summaries are provided for your benefit and are not legally binding. Please read the Terms of Service for the complete picture of your legal requirements.
-    section2: SECTION 2
-    info: WHAT WE DO WITH YOUR INFORMATION
-    paragraph4: 'When you register for CrowdfundHQ we ask for your email address. CrowdfundHQ uses the information we collect for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.'
-    paragraph5: As part of the buying and selling process on CrowdfundHQ, you will obtain the email address and/or shipping address of your customers. By entering into our User Agreement, you agree that, with respect to other users' personal information that you obtain through CrowdfundHQ or through a related communication or facilitated transaction, CrowdfundHQ hereby grants to you a license to use such information only for related communications that are not unsolicited commercial messages.
-    paragraph6: CrowdfundHQ does not tolerate spam. Therefore, without limiting the foregoing, you are not licensed to add the name of someone who has purchased an item from you, to your mail list (email or physical mail) without their express consent.
-    basically: BASICALLY
-    paragraph7: We won't sell your information or use it in any way we wouldn't want our own information shared. Do the same for people who sign-up on your CrowdfundHQ site.
-    section3: SECTION 3
-    security: SECURITY
-    paragraph8: The security of your personal information is important to us. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use means to protect your personal information, we cannot guarantee its absolute security. If you have any questions about security on our Web site, you can send email us at mail at CrowdfundHQ dot com.
-    paragraph9: We do our best to securely store information.
-    section4: SECTION 4
-    disclosure: DISCLOSURE
-    paragraph10: CrowdfundHQ may disclose personally identifiable information under special circumstances, such as to comply with court orders requiring us to do so or when your actions violate the Terms of Service.
-    paragraph11: We won't disclose your information unless you do something that makes us disclose it.
-    section5: SECTION 5
-    storage: CLIENT DATA STORAGE
-    paragraph12: CrowdfundHQ makes no claim to the rights of your data. You retain all rights to your data and we will never contact your users directly, or use your data for our own business advantage or to compete with you or market to your users.
-    paragraph13: You own your data. We won't use it.
-    section6: SECTION 6
-    cookies: COOKIES
-    paragraph14: A cookie is a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer’s hard drive. Every computer that accesses our website is assigned a different cookie by us.
-    paragraph15: We store a "cookie" on your computer to identify your session. This is how you stay logged in when you return to CrowdfundHQ.
-    section7: SECTION 7
-    privacy: CHANGES TO THIS PRIVACY POLICY
-    paragraph16: We reserve the right to modify this privacy statement at any time, so please review it frequently. If we make material changes to this policy, we will notify you here or by means of a notice on our homepage so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it.
-    paragraph17: We can change this privacy policy at anytime, but we'll try to let you know when we do.
-  reset:
-    title: Reset password
-    header: Reset password
-    verify: Please wait, verifying key...
-    password_label: New Password
-    update: Update
-    error_msg: Key not valid, please try again
-    confirmation: Your password has been updated
-  settings:
-    title: Settings
-    header: Settings
-    update: Update Name &amp; Email
-    email_label: Email
-    header_update: Update Password
-    cp_label: Current password
-    np_label: New password
-    save: Save
-    delete_user: Delete user
-    warning: 'Warning: This can not be undone'
-    settings_updated: Settings updated
-    pw_updated: Password updated
-    confirm: Are you sure? This can not be undone.
-    confirmation: Your user was deleted
-  signup:
-    title: Signup
-    header: Signup
-    form:
-      name: Name
-      email: Email
-      password: Password
-      button: Sign up
-    login: Go to login
-    account: Already have an account?
-    confirmation: Welcome to CrowdfundHQ
-  terms:
-    title: Terms
-    header: Terms
-    section1: SECTION 1
-    introduction: INTRODUCTION
-    paragraph1: By signing up for CrowdfundHQ (“Service”) or any of the services of CrowdfundHQ, you are agreeing to be bound by the following terms and conditions (“Terms of Service”). Any new features or tools which are added to the current Service shall be also subject to the Terms of Service.
-    paragraph2: You can review the most current version of the Terms of Service at any time at here. CrowdfundHQ reserves the right to update and change the Terms of Service by posting updates and changes to the CrowdfundHQ website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.
-    paragraph3: Everyday language summaries are provided for your benefit and are not legally binding. Please read the "Terms of Service" for the complete picture of your legal requirements.
-    paragraph4: By using CrowdfundHQ or any CrowdfundHQ services, you are agreeing to these terms. Be sure to occasionally check back for updates.
-    section2: SECTION 2
-    account: ACCOUNT TERMS
-    paragraph5:
-      You must be 18 years or older to use this Service.
-      You must provide a valid email address, and any other information needed in order to complete the signup process.
-      You are responsible for keeping your password secure. CrowdfundHQ cannot and will not be liable for any loss or damage from your failure to maintain the security of your account and password.
-      You may not use the CrowdfundHQ service for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).
-      You are responsible for all activity and content (data, graphics, photos, links) that is uploaded under your CrowdfundHQ account & on your CrowdfundHQ site.
-      You must not transmit any worms or viruses or any code of a destructive nature.
-      A breach or violation of any of the Account Terms as determined in the sole discretion of CrowdfundHQ will result in an immediate termination of your services.
-      We are not responsible for anything on the sites you create using CrowdfundHQ.
-    paragraph6: We're not liable for what you do using CrowdfundHQ.
-    section3: SECTION 3
-    conditions: GENERAL CONDITIONS
-    paragraph7: You must read, agree with and accept all of the terms and conditions contained in this User Agreement and the Privacy Policy before you may become a member of CrowdfundHQ.
-    paragraph8:
-      We reserve the right to modify or terminate the Service for any reason, without notice at any time.
-      We reserve the right to refuse service to anyone for any reason at any time.
-      Your use of the Service is at your sole risk. The Service is provided on an ”as is“ and ”as available“ basis without any warranty or condition, express, implied or statutory.
-      CrowdfundHQ does not warrant that the service will be uninterrupted, timely, secure, or error-free.
-      CrowdfundHQ does not warrant that the results that may be obtained from the use of the service will be accurate or reliable.
-      You understand that your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices.
-      We may, but have no obligation to, remove Content and Accounts containing Content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.
-      CrowdfundHQ does not warrant that the quality of any products, services, information, or other material purchased or obtained by you through the Service will meet your expectations, or that any errors in the Service will be corrected.
-    paragraph9:
-      You expressly understand and agree that CrowdfundHQ shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.
-      In no event shall CrowdfundHQ or our suppliers be liable for lost profits or any special, incidental or consequential damages arising out of or in connection with our site, our services or this agreement (however arising including negligence). You agree to indemnify and hold us and (as applicable) our parent, subsidiaries, affiliates, CrowdfundHQ partners, officers, directors, agents, and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third party due to or arising out of your breach of this Agreement or the documents it incorporates by reference, or your violation of any law or the rights of a third party.
-      Technical support is only provided to paying account holders and is only available via email.
-      You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by CrowdfundHQ.
-      Verbal or written abuse of any kind (including threats of abuse or retribution) of any CrowdfundHQ customer, CrowdfundHQ employee, member, or officer will result in immediate account termination.
-      We do not claim any intellectual property rights over the material you provide to the CrowdfundHQ service. All material you upload remains yours. You can remove your CrowdfundHQ site at any time by deleting your account. This will also remove all content you have stored on the Service.
-      By uploading images and content to CrowdfundHQ.com, you agree to allow other internet users to view them and you agree to allow CrowdfundHQ to display and store them and you agree that CrowdfundHQ can, at any time, review all the content submitted by you to its Service.
-    paragraph10:
-      The failure of CrowdfundHQ to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and CrowdfundHQ and govern your use of the Service, superseding any prior agreements between you and CrowdfundHQ (including, but not limited to, any prior versions of the Terms of Service).
-      You retain ownership over all content that you submit to a CrowdfundHQ site however, by making your site public, you agree to allow others to view your content.
-      You shall not purchase search engine or other pay per click keywords (such as Google AdWords), or domain names that use CrowdfundHQ or CrowdfundHQ trademarks and/or variations and misspellings thereof.
-      CrowdfundHQ does not pre-screen Content and it is in their sole discretion to refuse or remove any Content that is available via the Service.
-      Questions about the Terms of Service should be sent to support at CrowdfundHQ dot com.
-    paragraph11: We don't preview your content, and you own your content. But we can terminate your account at our discreteon for any reason. And you can't resell our services.
-    paragraph12: We are not responsible if you break the law, breach this agreement or go against the rights of a third party.
-    section4: SECTION 4
-    fee: PAYMENT OF FEES
-    paragraph13:
-      The service will be billed in one month intervals via a Paypal subscription payment.
-      If your CrowdfundHQ account is overdue on payment, your CrowdfundHQ site will be restricted from processing any payments, and we may limit your account entirely until CrowdfundHQ receives payment from your account.
-      All fees are exclusive of all federal, provincial, state or other governmental sales, goods and services, harmonized or other taxes, fees or charges now in force or enacted in the future (“Taxes”).
-      All payments are non-refundable.
-    paragraph14: Payments to CrowdfundHQ are made via a Paypal subscription every month. If you don't pay, your account will be limited after the missed payment. All payments are non-refundable.
-    section5: SECTION 5
-    cancellation: CANCELLATION AND TERMINATION
-    paragraph15:
-      'You may cancel your account at anytime by going to your CrowdfundHQ account settings and deleting your account.
-      Once your account is cancelled all of your Content will be immediately deleted from the Service. Since deletion of all data is final please be sure that you do in fact want to cancel your account before doing so.
-      We reserve the right to modify or terminate the CrowdfundHQ service for any reason, without notice at any time.
-      Fraud: Without limiting any other remedies, CrowdfundHQ may suspend or terminate your account if we suspect that you (by conviction, settlement, insurance or escrow investigation, or otherwise) have engaged in fraudulent activity in connection with the Site.'
-    paragraph16: You can cancel at anytime, and all your data will be deleted from our server. This can't be undone, so be 100% sure before you delete your account.
-    section6: SECTION 6
-    basically: BASICALLY
-    modifications: MODIFICATIONS TO THE SERVICE AND PRICES
-    paragraph17:
-      Prices for using CrowdfundHQ are subject to change upon 14 days notice from CrowdfundHQ. Such notice may be provided at any time by posting the changes to the CrowdfundHQ Site (CrowdfundHQ.com) or the administration menu of your CrowdfundHQ account via an announcement.
-      CrowdfundHQ reserves the right at any time to time to modify or discontinue, the Service (or any part thereof) with or without notice.
-      CrowdfundHQ shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.
-    paragraph18: We can change, modify, or end service at anytime without liability. If we change prices, we'll let you know two weeks ahead of time from your account dashboard.
-  upload:
-    title: Upload
-    header: Upload
-    intro: Click the button to upload a file
-    button: Upload
+about:
+  title: About
+  header: About
+  intro: CrowdfundHQ is everything you need to develop fast, future proof, advanced applications.
+  made_by: Made by
+
+contact:
+  title: Contact
+  header: Contact
+  email: Email
+  subject: Subject
+  message: Message
+  send: Send
+
+sent:
+  thank_you: Thank you for contacting us!
+  text: We'll get back to you shortly.
+  title: Sent
+
+forgot:
+  title: Forgot password
+  email: Email
+  submit: Submit
+  back: Back to login
+  confirmation: Instructions have been sent to your email
+
+index:
+  title: Home
+  welcome: Welcome!
+  header: Create your own crowdfunding web site.
+  featured: Featured campaigns.
+  no_campaigns: There are no campaigns at the moment...
+
+login:
+  title: Login
+  form:
+    email: Email
+    password: Password
+    button: Log in
+  no_account: Don't have an account yet?
+  signup: Go to signup
+  forgot: Forgot your password?
+  welcome: Welcome to CrowdfundHQ
+  required: Please log in to continue
+
+user:
+  anonymous: Anonymous
+
+profile:
+  homepage: Homepage
+  member_since: Member since
+  not_found: User not found
+  no_exist: That user does not exist. Are you sure the link is correct?
+  edit: Edit settings
+  my_campaigns: My campaigns
+  my_contributions: My contributions
+
+reset:
+  title: Reset password
+  header: Reset password
+  verify: Please wait, verifying key...
+  password: New Password
+  update: Update
+  error: Key not valid, please try again
+  confirmation: Your password has been updated
+
+settings:
+  title: Settings
+  header: Settings
+  update: Update Name &amp; Email
+  update_profile: Update profile
+  address: Address
+  email: Email
+  header_update: Update Password
+  current_password: Current password
+  new_password: New password
+  save: Save
+  delete_user: Delete user
+  warning: 'Warning: This can not be undone'
+  saved: Settings saved
+  confirm: Are you sure? This can not be undone.
+  confirmation: Your user was deleted
+
+signup:
+  title: Signup
+  form:
+    name: Name
+    email: Email
+    password: Password
+    button: Sign up
+  login: Go to login
+  account: Already have an account?
+  confirmation: Welcome to CrowdfundHQ
+
+upload:
+  title: Upload
+  header: Upload
+  intro: Click the button to upload a file
+
+thanks:
+  thank_you: Thank you for your contribution!
+  title: Thanks
+
+campaign:
+  saved: Campaign saved
+  upload_failed: Upload failed
+  no_categories: No categories found
+  no_updates: No updates yet...
+  no_comments: No comments yet...
+  no_contributions: No contributions yet...
+  no_rewards: This campaign doesn't have any rewards.
+  no_about: Nothing written yet...
+  form:
+    image: Image
+    thumbnail: Thumbnail
+    video: Video URL
+    name: Name
+    goal: Goal
+    duration: Duration
+    location: Location
+    type: Type
+    all_nothing: All or nothing
+    keep: Keep it all
+    subscription: Subscription
+    category: Category
+    description: Description
+    about: About
+  show:
+    title: Show campaign
+    campaign_by: A campaign by
+    raise: Raised of
+    days_left: Days left
+  delete:
+    title: Delete campaign
+    header: Are you sure you want to delete?
+    hint: This will also delete any data associated with the campaign and cannot be undone.
+  edit:
+    title: Edit campaign
+  new:
+    title: Create new campaign
+  tabs:
+    about: About
+    updates: Updates
+    comments: Comments
+    contributions: Contributions
+  create: Create new campaign
+  content: Content
+  no_campaigns: There are no campaigns at the moment...
+
+badge:
+  days: days
+  funded: Funded
+  contributed: Contributed
+  to_go: To go
+
+submit:
+  title: Submit
+  submitted: Campaign submitted
+  header: Are you sure you want to submit?
+  hint: The campaign won't be editable and will start once it has been approved.
+
+message:
+  title: Send message
+  send: Send message
+  thanks: Message sent
+  info: Thanks for your message, we value your input.
+
+update:
+  create: Create new update
+  saved: Update saved
+  content: Content
+  new: New Update
+  edit: Edit Update
+  delete: Delete Update
+  created: Update created
+  deleted: Update deleted
+
+comment:
+  create: Create new comment
+  saved: Comment saved
+  new: New comment
+  edit: Edit comment
+  delete: Delete comment
+  created: Comment created
+  deleted: Comment deleted
+
+reward:
+  create: Create new reward
+  amount: Amount
+  description: Description
+  saved: Reward saved
+  edit: Edit reward
+  new: New reward
+  created: Reward created
+  delete: Delete reward
+
+contribution:
+  create: Create new contribution
+  rewards: Rewards
+  no_reward: I don't want a reward.
+  text_contribute: I just want to contribute to the campaign.
+  contribute: Contribute
+  contribute_to: Contribute to
+  accept_terms: By checking this you accept
+  terms: the terms
+  more: or more
+  no_contributions: No contributions made yet...
+  new: New contribution
+  created: Contribution created
+
+# BUTTONS
+button:
+  save: Save
+  cancel: Cancel
+  delete: Delete
+  edit: Edit
+  submit: Submit
+  select: Select
+  search: Search
+  contribute: Contribute now
+  payment: Go to payment
+
+privacy:
+  title: Privacy
+  header: Privacy
+  section1: SECTION 1
+  general: GENERAL
+  paragraph1: CrowdfundHQ collects e-mail addresses of people who send us e-mail. We also collect information on what pages users access and information provided to us by users via surveys and site registrations. Such information may contain personal data about you including your address, phone numbers, etc. We are not allowed to disclose such personal information without your written permission.
+  paragraph2: However, certain information collected from you and about you is used within the context of providing the Service. The information we collect is not shared with or sold to others except under the certain circumstances and which your use of the Service is deemed to provide to us a valid consent to disclose the following
+  paragraph3:
+    In order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of CrowdfundHQ’s terms of use, or as otherwise required by law.
+    CrowdfundHQ does not rent, sell, or share personal information about you with other companies except to provide products or services you’ve requested or when we have your permission.
+    We will transfer information about you if CrowdfundHQ is acquired by or merged with another company. In this event, CrowdfundHQ will notify you by email or by putting a prominent notice on the CrowdfundHQ web site before information about you is transferred and becomes subject to a different privacy policy.
+    Everyday language summaries are provided for your benefit and are not legally binding. Please read the Terms of Service for the complete picture of your legal requirements.
+  section2: SECTION 2
+  info: WHAT WE DO WITH YOUR INFORMATION
+  paragraph4: 'When you register for CrowdfundHQ we ask for your email address. CrowdfundHQ uses the information we collect for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.'
+  paragraph5: As part of the buying and selling process on CrowdfundHQ, you will obtain the email address and/or shipping address of your customers. By entering into our User Agreement, you agree that, with respect to other users' personal information that you obtain through CrowdfundHQ or through a related communication or facilitated transaction, CrowdfundHQ hereby grants to you a license to use such information only for related communications that are not unsolicited commercial messages.
+  paragraph6: CrowdfundHQ does not tolerate spam. Therefore, without limiting the foregoing, you are not licensed to add the name of someone who has purchased an item from you, to your mail list (email or physical mail) without their express consent.
+  basically: BASICALLY
+  paragraph7: We won't sell your information or use it in any way we wouldn't want our own information shared. Do the same for people who sign-up on your CrowdfundHQ site.
+  section3: SECTION 3
+  security: SECURITY
+  paragraph8: The security of your personal information is important to us. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use means to protect your personal information, we cannot guarantee its absolute security. If you have any questions about security on our Web site, you can send email us at mail at CrowdfundHQ dot com.
+  paragraph9: We do our best to securely store information.
+  section4: SECTION 4
+  disclosure: DISCLOSURE
+  paragraph10: CrowdfundHQ may disclose personally identifiable information under special circumstances, such as to comply with court orders requiring us to do so or when your actions violate the Terms of Service.
+  paragraph11: We won't disclose your information unless you do something that makes us disclose it.
+  section5: SECTION 5
+  storage: CLIENT DATA STORAGE
+  paragraph12: CrowdfundHQ makes no claim to the rights of your data. You retain all rights to your data and we will never contact your users directly, or use your data for our own business advantage or to compete with you or market to your users.
+  paragraph13: You own your data. We won't use it.
+  section6: SECTION 6
+  cookies: COOKIES
+  paragraph14: A cookie is a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer’s hard drive. Every computer that accesses our website is assigned a different cookie by us.
+  paragraph15: We store a cookie on your computer to identify your session. This is how you stay logged in when you return to CrowdfundHQ.
+  section7: SECTION 7
+  privacy: CHANGES TO THIS PRIVACY POLICY
+  paragraph16: We reserve the right to modify this privacy statement at any time, so please review it frequently. If we make material changes to this policy, we will notify you here or by means of a notice on our homepage so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it.
+  paragraph17: We can change this privacy policy at anytime, but we'll try to let you know when we do.
+
+terms:
+  title: Terms
+  header: Terms
+  section1: SECTION 1
+  introduction: INTRODUCTION
+  paragraph1: By signing up for CrowdfundHQ (“Service”) or any of the services of CrowdfundHQ, you are agreeing to be bound by the following terms and conditions (“Terms of Service”). Any new features or tools which are added to the current Service shall be also subject to the Terms of Service.
+  paragraph2: You can review the most current version of the Terms of Service at any time at here. CrowdfundHQ reserves the right to update and change the Terms of Service by posting updates and changes to the CrowdfundHQ website. You are advised to check the Terms of Service from time to time for any updates or changes that may impact you.
+  paragraph3: Everyday language summaries are provided for your benefit and are not legally binding. Please read the Terms of Service for the complete picture of your legal requirements.
+  paragraph4: By using CrowdfundHQ or any CrowdfundHQ services, you are agreeing to these terms. Be sure to occasionally check back for updates.
+  section2: SECTION 2
+  account: ACCOUNT TERMS
+  paragraph5:
+    You must be 18 years or older to use this Service.
+    You must provide a valid email address, and any other information needed in order to complete the signup process.
+    You are responsible for keeping your password secure. CrowdfundHQ cannot and will not be liable for any loss or damage from your failure to maintain the security of your account and password.
+    You may not use the CrowdfundHQ service for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).
+    You are responsible for all activity and content (data, graphics, photos, links) that is uploaded under your CrowdfundHQ account & on your CrowdfundHQ site.
+    You must not transmit any worms or viruses or any code of a destructive nature.
+    A breach or violation of any of the Account Terms as determined in the sole discretion of CrowdfundHQ will result in an immediate termination of your services.
+    We are not responsible for anything on the sites you create using CrowdfundHQ.
+  paragraph6: We're not liable for what you do using CrowdfundHQ.
+  section3: SECTION 3
+  conditions: GENERAL CONDITIONS
+  paragraph7: You must read, agree with and accept all of the terms and conditions contained in this User Agreement and the Privacy Policy before you may become a member of CrowdfundHQ.
+  paragraph8:
+    We reserve the right to modify or terminate the Service for any reason, without notice at any time.
+    We reserve the right to refuse service to anyone for any reason at any time.
+    Your use of the Service is at your sole risk. The Service is provided on an ”as is“ and ”as available“ basis without any warranty or condition, express, implied or statutory.
+    CrowdfundHQ does not warrant that the service will be uninterrupted, timely, secure, or error-free.
+    CrowdfundHQ does not warrant that the results that may be obtained from the use of the service will be accurate or reliable.
+    You understand that your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices.
+    We may, but have no obligation to, remove Content and Accounts containing Content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.
+    CrowdfundHQ does not warrant that the quality of any products, services, information, or other material purchased or obtained by you through the Service will meet your expectations, or that any errors in the Service will be corrected.
+  paragraph9:
+    You expressly understand and agree that CrowdfundHQ shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.
+    In no event shall CrowdfundHQ or our suppliers be liable for lost profits or any special, incidental or consequential damages arising out of or in connection with our site, our services or this agreement (however arising including negligence). You agree to indemnify and hold us and (as applicable) our parent, subsidiaries, affiliates, CrowdfundHQ partners, officers, directors, agents, and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third party due to or arising out of your breach of this Agreement or the documents it incorporates by reference, or your violation of any law or the rights of a third party.
+    Technical support is only provided to paying account holders and is only available via email.
+    You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by CrowdfundHQ.
+    Verbal or written abuse of any kind (including threats of abuse or retribution) of any CrowdfundHQ customer, CrowdfundHQ employee, member, or officer will result in immediate account termination.
+    We do not claim any intellectual property rights over the material you provide to the CrowdfundHQ service. All material you upload remains yours. You can remove your CrowdfundHQ site at any time by deleting your account. This will also remove all content you have stored on the Service.
+    By uploading images and content to CrowdfundHQ.com, you agree to allow other internet users to view them and you agree to allow CrowdfundHQ to display and store them and you agree that CrowdfundHQ can, at any time, review all the content submitted by you to its Service.
+  paragraph10:
+    The failure of CrowdfundHQ to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and CrowdfundHQ and govern your use of the Service, superseding any prior agreements between you and CrowdfundHQ (including, but not limited to, any prior versions of the Terms of Service).
+    You retain ownership over all content that you submit to a CrowdfundHQ site however, by making your site public, you agree to allow others to view your content.
+    You shall not purchase search engine or other pay per click keywords (such as Google AdWords), or domain names that use CrowdfundHQ or CrowdfundHQ trademarks and/or variations and misspellings thereof.
+    CrowdfundHQ does not pre-screen Content and it is in their sole discretion to refuse or remove any Content that is available via the Service.
+    Questions about the Terms of Service should be sent to support at CrowdfundHQ dot com.
+  paragraph11: We don't preview your content, and you own your content. But we can terminate your account at our discreteon for any reason. And you can't resell our services.
+  paragraph12: We are not responsible if you break the law, breach this agreement or go against the rights of a third party.
+  section4: SECTION 4
+  fee: PAYMENT OF FEES
+  paragraph13:
+    The service will be billed in one month intervals via a Paypal subscription payment.
+    If your CrowdfundHQ account is overdue on payment, your CrowdfundHQ site will be restricted from processing any payments, and we may limit your account entirely until CrowdfundHQ receives payment from your account.
+    All fees are exclusive of all federal, provincial, state or other governmental sales, goods and services, harmonized or other taxes, fees or charges now in force or enacted in the future (“Taxes”).
+    All payments are non-refundable.
+  paragraph14: Payments to CrowdfundHQ are made via a Paypal subscription every month. If you don't pay, your account will be limited after the missed payment. All payments are non-refundable.
+  section5: SECTION 5
+  cancellation: CANCELLATION AND TERMINATION
+  paragraph15:
+    'You may cancel your account at anytime by going to your CrowdfundHQ account settings and deleting your account.
+    Once your account is cancelled all of your Content will be immediately deleted from the Service. Since deletion of all data is final please be sure that you do in fact want to cancel your account before doing so.
+    We reserve the right to modify or terminate the CrowdfundHQ service for any reason, without notice at any time.
+    Fraud: Without limiting any other remedies, CrowdfundHQ may suspend or terminate your account if we suspect that you (by conviction, settlement, insurance or escrow investigation, or otherwise) have engaged in fraudulent activity in connection with the Site.'
+  paragraph16: You can cancel at anytime, and all your data will be deleted from our server. This can't be undone, so be 100% sure before you delete your account.
+  section6: SECTION 6
+  basically: BASICALLY
+  modifications: MODIFICATIONS TO THE SERVICE AND PRICES
+  paragraph17:
+    Prices for using CrowdfundHQ are subject to change upon 14 days notice from CrowdfundHQ. Such notice may be provided at any time by posting the changes to the CrowdfundHQ Site (CrowdfundHQ.com) or the administration menu of your CrowdfundHQ account via an announcement.
+    CrowdfundHQ reserves the right at any time to time to modify or discontinue, the Service (or any part thereof) with or without notice.
+    CrowdfundHQ shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.
+  paragraph18: We can change, modify, or end service at anytime without liability. If we change prices, we'll let you know two weeks ahead of time from your account dashboard.
