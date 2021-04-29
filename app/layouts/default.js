@@ -45,11 +45,15 @@ module.exports = async function($) {
       <body>
         <header>
           <nav>
-            <a href="${$.link('index')}">Home</a>
-            <a href="${$.link('about')}">About</a>
-            <a class="pub" href="${$.link('signup')}">Signup</a>
-            <a class="pub" href="${$.link('login')}">Login</a>
-            <a class="admin" href="javascript:void(0)" onclick="handleLogout();return false">Logout</a>
+            <div>
+              <a href="${$.link('index')}">Home</a>
+              <a href="${$.link('about')}">About</a>
+            </div>
+            <div>
+              <a class="pub" href="${$.link('signup')}">Signup</a>
+              <a class="pub" href="${$.link('login')}">Login</a>
+              <a class="user" href="javascript:void(0)" onclick="handleLogout();return false">Logout</a>
+            </div>
           </nav>
           <script>${init};init()</script>
         </header>

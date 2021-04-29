@@ -2,7 +2,7 @@
 
 main {
   padding: 2rem 0;
-  max-width: 600px;
+  max-width: 680px;
 }
 
 form button ~ a,
@@ -13,9 +13,18 @@ nav a {
 body > header {
   text-align: center;
   padding: 1rem 0;
-  margin: 0;
-  nav a {
-    margin: 0 0.5rem;
+  margin: 0 auto;
+  max-width: 680px;
+
+  nav {
+    display: flex;
+    text-align: left;
+    div:first-child {
+      flex-grow: 1;
+    }
+    a {
+      margin: 0 0.5rem;
+    }
   }
 }
 
@@ -50,6 +59,10 @@ a.active {
 .list {
   border-bottom: 1px solid $light;
   padding: 1rem 0;
+}
+
+.user {
+  display: none;
 }
 
 @import 'dialog.scss';
