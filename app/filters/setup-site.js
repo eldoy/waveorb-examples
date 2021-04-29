@@ -12,7 +12,7 @@ module.exports = async function($) {
     $.site = await $.app.db('site').get({ domain: hostname })
   }
 
-  if (process.env.NODE_ENV === 'development' && !$.site) {
+  if (process.env.NODE_ENV == 'development' && !$.site) {
     $.site = await $.app.db('site').get()
   }
 

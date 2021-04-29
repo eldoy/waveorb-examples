@@ -1,6 +1,6 @@
 /** Reset mail */
 module.exports = async function($, data) {
-  const host = process.env.NODE_ENV === 'production'
+  const host = process.env.NODE_ENV == 'production'
     ? 'https://example.com'
     : 'http://localhost:5001'
 

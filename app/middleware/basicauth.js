@@ -5,7 +5,7 @@ module.exports = async function(req, res) {
   // if (auth) {
   //   const [username, password] = Buffer.from(auth.split(' ')[1], 'base64').toString().split(/:(.+)/)
   //   console.log({ username, password })
-  //   if (username === 'admin' && password === 'test') {
+  //   if (username == 'admin' && password == 'test') {
   //     return
   //   }
   // }
