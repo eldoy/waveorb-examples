@@ -64,6 +64,7 @@ module.exports = async function($) {
         </footer>
         <script>
           flash()
+          navCount()
           ${handleLogout}
         </script>
       </body>
