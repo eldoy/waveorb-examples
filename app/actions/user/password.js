@@ -14,7 +14,7 @@ module.exports = {
         required: true,
         matcher: async function(current, $) {
           if (!$.tools.compare(current, $.user.password)) {
-            return 'password not valid'
+            return $.t('actions.user.password_not_valid')
           }
         }
       },
@@ -26,6 +26,9 @@ module.exports = {
   },
   main: async function($) {
     const { query = {}, values = {} } = $.params
+    if ($.user.id != query.id) {
+      return { error: { message: $.t('actions.user.user_id_mismatch') } }
+    }
     const password = $.tools.hash(values.password)
     return await $.app.db('user').update(query, { password })
   }

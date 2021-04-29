@@ -3,14 +3,15 @@ filters:
   authenticate:
     user_not_found: user not found
     login_required: login required
+    already_logged_in: you are already logged in
 
 # ACTIONS
 actions:
   user:
+    password_not_valid: password is not valid
+    user_id_mismatch: user id mismatch
     update_user_email:
       email_taken: email is taken
-    update_user_password:
-      password_not_valid: password is not valid
     reset_password:
       invalid: reset key is invalid
       expired: reset key has expired
@@ -20,13 +21,10 @@ actions:
   payment:
     description: APPLICATION site activation
   login:
-    create_user:
-      email_already_exists: email already exists
-    create_login:
-      email_not_found: email not found
-      password_not_valid: password is not valid
-    forgot_password:
-      email_not_found: email not found
+    email_already_exists: email already exists
+    email_not_found: email not found
+    user_not_found: user not found
+    password_not_valid: password is not valid
 
 # LAYOUTS
 layouts:

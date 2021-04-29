@@ -1,4 +1,4 @@
-const editorToolbar = require('../pages/_editor-toolbar.js')
+const editorToolbar = require('../pages/components/_editor-toolbar.js')
 
 module.exports = async function ($) {
   const host = process.env.NODE_ENV == 'production'
@@ -18,18 +18,6 @@ module.exports = async function ($) {
         ${$.style('/bundle.css')}
         <script>window.api = waveorb('${host}')</script>
         ${process.env.NODE_ENV == 'development' ? '<script src="/js/dev.js"></script>' : ''}
-        ${(function () {
-          if ($.lang !== 'en') {
-            return /* html */ `
-              <script>
-                Trix.config.toolbar.getDefaultHTML = function() {
-                  return '${editorToolbar($.app.locales[$.lang].editor)}'
-                }
-              </script>
-            `
-          }
-          return ''
-        })()}
       </head>
       <body id="dialog-layout">
         <div class="dialog">

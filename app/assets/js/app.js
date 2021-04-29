@@ -113,11 +113,11 @@ function toggleVisibility(options = {}, fn) {
   var pub = options.pub || 'public'
   var priv = options.priv || 'private'
   var selector = '.' + pub + ',.' + priv
-  var session = cookie(options.cookie || 'session')
+  var login = cookie(options.cookie || 'login')
   var toggle = fn || function(el) {
     var isPublic = el.classList.contains(pub)
     var isPrivate = el.classList.contains(priv)
-    if (session && isPublic || !session && isPrivate) {
+    if (login && isPublic || !login && isPrivate) {
       el.style.display = 'none'
     }
   }
@@ -133,7 +133,7 @@ function setActiveLink(options = {}) {
 }
 
 function handleLogout(options = {}, fn) {
-  var name = options.cookie || 'session'
+  var name = options.cookie || 'login'
   if (cookie(name)) cookie(name, null)
   if (fn) fn()
 }

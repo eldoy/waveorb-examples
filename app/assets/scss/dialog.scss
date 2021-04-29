@@ -1,12 +1,12 @@
 #dialog-layout {
   padding: 16px;
-  margin: 50px 0;
+  margin: 10px 0;
 
   .dialog {
     margin: 0 auto;
     padding: 10px 20px 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 680px;
     min-height: 220px;
     border-radius: 5px;
     text-align: left;
@@ -37,8 +37,4 @@
       white-space: nowrap;
     }
   }
-}
-
-.settings h4 {
-  color: var(--danger);
 }

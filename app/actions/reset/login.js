@@ -21,7 +21,7 @@ module.exports = {
       return { error: { message: $.t('actions.account.reset_password.expired') } }
     }
     const token = $.tools.uuid()
-    await $.app.db('session').create({ token, user_id: reset.user_id })
+    await $.app.db('login').create({ token, user_id: reset.user_id })
     return { token }
   }
 }

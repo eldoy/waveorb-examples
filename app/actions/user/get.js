@@ -1,6 +1,6 @@
 /* get */
 module.exports = {
-  filters: ['setup-site'],
+  filters: ['setup-site', 'authenticate', 'login-required'],
   validate: {
     query: {
       id: {

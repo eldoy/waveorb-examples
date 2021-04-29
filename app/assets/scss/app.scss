@@ -61,8 +61,21 @@ a.active {
   padding: 1rem 0;
 }
 
-.user {
-  display: none;
+#settings {
+  h4 {
+    margin-top: 2rem;
+    &.danger {
+      color: $danger;
+    }
+  }
+
+  form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fafafa;
+    padding: 1rem;
+
+  }
 }
 
 @import 'dialog.scss';

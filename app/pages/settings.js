@@ -9,11 +9,13 @@ module.exports = async function ($) {
         files: input.files,
         progress: function (event) {
           var { loaded, total, percent } = event
-          text('.progress', `${(loaded / 1024).toFixed(2)} kb/${(total / 1024).toFixed(2)} kb, ${percent}%`)
+          text('.progress', `${(loaded/1024).toFixed(2)} kb/${(total/1024).toFixed(2)} kb, ${percent}%`)
         }
       }
     )
-    html('.user-image', `<img class="profile-image" src="${esc(result.image)}">`)
+    if (result.image) {
+      html('.user-image', `<img class="profile-image" src="${esc(result.image)}">`)
+    }
   }
 
   async function handleSaveUser(button) {
@@ -23,7 +25,19 @@ module.exports = async function ($) {
     if (result.error) {
       showErrors(result)
     } else {
-      flash($.t('settings.saved'))
+      flash($.t('settings.saved'), { scroll: false })
+    }
+    button.disabled = false
+  }
+
+  async function handleUpdatePassword(button) {
+    button.disabled = true
+    var values = serialize(button.form)
+    var result = await api({ action: 'user/password', query: { id: user.id }, values })
+    if (result.error) {
+      showErrors(result)
+    } else {
+      flash($.t('settings.saved'), { scroll: false })
     }
     button.disabled = false
   }
@@ -33,7 +47,7 @@ module.exports = async function ($) {
       button.disabled = true
       var result = await api({ action: 'user/delete', query: { id: user.id } })
       if (result.error) {
-        flash(result.error.message)
+        flash(result.error.message, { scroll: false })
       } else {
         cookie('flash', $.t('settings.confirmation'))
         cookie('login', null)
@@ -44,12 +58,9 @@ module.exports = async function ($) {
   }
 
   async function renderSettings() {
-    var token = cookie('login')
-    user = await api({ action: 'user/get', query: { token } })
+    user = await api({ action: 'user/current' })
     var image = esc(user.image) || `https://gravatar.com/avatar/${esc(user.md5)}`
-    html(
-      '#settings',
-      /* html */ `
+    html('#settings', /* html */ `
       <div class="user-image"><img class="profile-image" src="${image}"></div>
       <input type="file" onchange="handleUpload(this)">
 
@@ -68,25 +79,6 @@ module.exports = async function ($) {
           <br>
           <input id="email" type="email" name="email" value="${esc(user.email)}" oninput="clearErrors(this)">
           <em class="email-errors"></em>
-        </p>
-        <p>
-          <label for="homepage">${$.t('profile.homepage')}</label>
-          <span class="star" title="required">*</span>
-          <br>
-          <input id="homepage" type="text" name="homepage" value="${esc(user.homepage)}" oninput="clearErrors(this)">
-          <em class="homepage-errors"></em>
-        </p>
-        <p>
-          <label for="about">${$.t('layouts.nav.about')}</label>
-          <br>
-          <textarea id="about" name="about" oninput="clearErrors(this)">${esc(user.about)}</textarea>
-          <em class="about-errors"></em>
-        </p>
-        <p>
-          <label for="address">${$.t('settings.address')}</label>
-          <br>
-          <textarea id="address" name="address" oninput="clearErrors(this)">${esc(user.address)}</textarea>
-          <em class="address-errors"></em>
         </p>
         <p>
           <button onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
@@ -110,10 +102,11 @@ module.exports = async function ($) {
           <em class="password-errors"></em>
         </p>
         <p>
-          <button onclick="handleSaveUser(this)">${$.t('settings.save')}</button>
+          <button onclick="handleUpdatePassword(this)">${$.t('settings.save')}</button>
         </p>
       </form>
-      <h4>${$.t('settings.delete_user')}</h4>
+
+      <h4 class="danger">${$.t('settings.delete_user')}</h4>
       <form onsubmit="return false">
         <p>
           <label class="warning-label">${$.t('settings.warning')}</label>
@@ -132,6 +125,7 @@ module.exports = async function ($) {
       var user
       ${handleUpload}
       ${handleSaveUser}
+      ${handleUpdatePassword}
       ${handleDeleteUser}
       ${renderSettings}
       renderSettings()

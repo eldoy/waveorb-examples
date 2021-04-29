@@ -6,7 +6,7 @@ module.exports = async function($) {
   async function handleLogout() {
     const token = cookie('login')
     if (token) {
-      var result = await api({ action: 'v1/login/delete', query: { token } })
+      var result = await api({ action: 'login/delete', query: { token } })
       if (result.error) {
         return flash(result.error.message)
       }
@@ -43,19 +43,20 @@ module.exports = async function($) {
         ${process.env.NODE_ENV == 'development' ? $.script('/js/dev.js') : ''}
       </head>
       <body>
-        <header>
+        <header id="header">
           <nav>
             <div>
               <a href="${$.link('index')}">Home</a>
               <a href="${$.link('about')}">About</a>
+              <a class="private" href="${$.link('profile')}">Profile</a>
             </div>
             <div>
-              <a class="pub" href="${$.link('signup')}">Signup</a>
-              <a class="pub" href="${$.link('login')}">Login</a>
-              <a class="user" href="javascript:void(0)" onclick="handleLogout();return false">Logout</a>
+              <a class="public" href="${$.link('signup')}">Signup</a>
+              <a class="public" href="${$.link('login')}">Login</a>
+              <a class="private" href="${$.link('settings')}">Settings</a>
+              <a class="private" href="javascript:void(0)" onclick="handleLogout();return false">Logout</a>
             </div>
           </nav>
-          <script>${init};init()</script>
         </header>
         <script>
           toggleVisibility()

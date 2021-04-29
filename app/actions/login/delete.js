@@ -13,6 +13,6 @@ module.exports = {
     const { query = {} } = $.params
     const { token } = query
 
-    return await $.app.db('session').delete({ token })
+    return await $.app.db('login').delete({ token })
   }
 }

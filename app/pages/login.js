@@ -6,6 +6,7 @@ module.exports = async function ($) {
     button.disabled = true
     var values = serialize(button.form)
     var result = await api({ action: 'login/create', values })
+    console.log(result)
     if (result.error) {
       showErrors(result)
     } else {
