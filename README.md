@@ -6,12 +6,11 @@ The documentation for Waveorb is [found here.](https://waveorb.com/docs.html)
 
 ### Installation
 
-To run the application, first clone it:
 ```bash
-# Install waveorb
+# Install example application
 git clone https://github.com/eldoy/waveorb-examples.git
 
-# Go to your new app
+# Go to your the app
 cd waveorb-examples
 
 # Install packages
