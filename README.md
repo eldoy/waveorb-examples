@@ -1,21 +1,21 @@
-# Waveorb Application Template
+# Waveorb Examples
 
-Welcome to your new Waveorb application!
-
-This template includes a fully working web app with pages, navigation, bundled assets, and more. Remove the things you don't need.
+This example Waveorb application showcases a fully working web app with pages, navigation, bundled assets, plugins, middleware, filters, login, signup, emails and more.
 
 The documentation for Waveorb is [found here.](https://waveorb.com/docs.html)
 
 ### Installation
+
+To run the application, first clone it:
 ```bash
 # Install waveorb
-npm i -g waveorb
-
-# Create an app, here called 'hello'
-waveorb create hello
+git clone https://github.com/eldoy/waveorb-examples.git
 
 # Go to your new app
-cd hello
+cd waveorb-examples
+
+# Install packages
+npm i
 
 # Install nodemon
 npm i -g nodemon
