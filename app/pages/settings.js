@@ -23,7 +23,7 @@ module.exports = async function ($) {
     var values = serialize(button.form)
     var result = await api({ action: 'user/update', query: { id: user.id }, values })
     if (result.error) {
-      showErrors(result)
+      showErrors(result, { scroll: false })
     } else {
       flash($.t('settings.saved'), { scroll: false })
     }
@@ -35,7 +35,7 @@ module.exports = async function ($) {
     var values = serialize(button.form)
     var result = await api({ action: 'user/password', query: { id: user.id }, values })
     if (result.error) {
-      showErrors(result)
+      showErrors(result, { scroll: false })
     } else {
       flash($.t('settings.saved'), { scroll: false })
     }
