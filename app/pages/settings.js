@@ -61,7 +61,7 @@ module.exports = async function ($) {
     user = await api({ action: 'user/current' })
     var image = esc(user.image) || `https://gravatar.com/avatar/${esc(user.md5)}`
     html('#settings', /* html */ `
-      <div class="user-image"><img class="profile-image" src="${image}"></div>
+      <div class="user-image"><img class="profile-image" src="${image}" height="80" width="80"></div>
       <input type="file" onchange="handleUpload(this)">
 
       <h4>${$.t('settings.update_profile')}</h4>
