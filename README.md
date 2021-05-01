@@ -50,9 +50,11 @@ cp -n app/layouts/{default.js,dialog.js} ~/src/your-waveorb-app/app/layouts
 # Copy translations
 mkdir -p ~/src/your-waveorb-app/app/locales
 cp -n app/locales/* ~/src/your-waveorb-app/app/locales
-```
 
-Optionally also copy the styles in `app/assets/scss/app.scss`.
+# Copy styles
+mkdir -p ~/src/your-waveorb-app/app/assets/scss
+cp -n app/assets/scss/{app.scss,dialog.scss} ~/src/your-waveorb-app/app/assets/scss
+```
 
 Please [report issues here.](https://github.com/eldoy/waveorb/issues)
 
