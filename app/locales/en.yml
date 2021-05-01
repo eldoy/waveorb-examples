@@ -51,7 +51,7 @@ editor:
   bullets: Bullets
   byte: Byte
   bytes: Bytes
-  captionPlaceholder: Add a caption…
+  captionPlaceholder: Add a caption...
   code: Code
   heading1: Heading
   indent: Increase Level
@@ -66,7 +66,7 @@ editor:
   undo: Undo
   unlink: Unlink
   url: URL
-  urlPlaceholder: Enter a URL…
+  urlPlaceholder: Enter a URL...
   GB: GB
   KB: KB
   MB: MB
