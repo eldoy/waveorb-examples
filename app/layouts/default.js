@@ -16,18 +16,6 @@ module.exports = async function($) {
     }
   }
 
-  function init() {
-    var u = cookie('login')
-    document.querySelectorAll('#header a').forEach(function (a) {
-      if ((u && a.classList.contains('pub')) || (!u && a.classList.contains('user'))) {
-        a.style.display = 'none'
-      }
-      if (a.pathname == location.pathname) {
-        a.classList.add('active')
-      }
-    })
-  }
-
   return /* html */`
     <!doctype html>
     <html lang="${$.lang}">
