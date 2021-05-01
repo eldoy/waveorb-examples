@@ -46,6 +46,7 @@ cp -n app/config/* ~/src/your-waveorb-app/config
 # Copy layouts
 mkdir -p ~/src/your-waveorb-app/app/layouts
 cp -n app/layouts/{default.js,dialog.js} ~/src/your-waveorb-app/app/layouts
+cp -n app/assets/img/close.svg ~/src/your-waveorb-app/app/assets/img
 
 # Copy translations
 mkdir -p ~/src/your-waveorb-app/app/locales
