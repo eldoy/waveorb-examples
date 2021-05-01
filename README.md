@@ -27,15 +27,15 @@ npm run dev
 
 Add login, signup, reset and contact form to your app:
 ```bash
-// Copy pages to your client
+# Copy pages to your client
 mkdir -p ~/src/your-waveorb-app/app/pages
 cp app/pages/{login.js,sent.js,contact.js,settings.js,forgot.js,signup.js} ~/src/your-waveorb-app/app/pages/
 
-// Copy actions to your api
+# Copy actions to your api
 mkdir -p ~/src/your-waveorb-app/app/actions
 cp -Rv app/actions/{login,reset,user,contact} ~/src/your-waveorb-app/app/actions
 
-// Copy filters to your api
+# Copy filters to your api
 mkdir -p ~/src/your-waveorb-app/app/filters
 cp app/filters/* ~/src/your-waveorb-app/app/filters
 ```
