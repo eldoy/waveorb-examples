@@ -25,20 +25,34 @@ npm run dev
 
 ### Usage
 
-Add login, signup, reset and contact form to your app:
+Add login, signup, reset, upload and contact form to your app:
 ```bash
 # Copy pages to your client
 mkdir -p ~/src/your-waveorb-app/app/pages
-cp app/pages/{login.js,sent.js,contact.js,settings.js,forgot.js,signup.js} ~/src/your-waveorb-app/app/pages/
+cp -n app/pages/{login.js,sent.js,contact.js,settings.js,forgot.js,signup.js,upload.js} ~/src/your-waveorb-app/app/pages
 
 # Copy actions to your api
 mkdir -p ~/src/your-waveorb-app/app/actions
-cp -Rv app/actions/{login,reset,user,contact} ~/src/your-waveorb-app/app/actions
+cp -Rvn app/actions/{login,reset,user,contact,upload} ~/src/your-waveorb-app/app/actions
 
 # Copy filters to your api
 mkdir -p ~/src/your-waveorb-app/app/filters
-cp app/filters/* ~/src/your-waveorb-app/app/filters
+cp -n app/filters/* ~/src/your-waveorb-app/app/filters
+
+# Copy config files to your api
+mkdir -p ~/src/your-waveorb-app/app/config
+cp -n app/config/* ~/src/your-waveorb-app/config
+
+# Copy layouts
+mkdir -p ~/src/your-waveorb-app/app/layouts
+cp -n app/layouts/{default.js,dialog.js} ~/src/your-waveorb-app/app/layouts
+
+# Copy translations
+mkdir -p ~/src/your-waveorb-app/app/locales
+cp -n app/locales/* ~/src/your-waveorb-app/app/locales
 ```
+
+Optionally also copy the styles in `app/assets/scss/app.scss`.
 
 Please [report issues here.](https://github.com/eldoy/waveorb/issues)
 
