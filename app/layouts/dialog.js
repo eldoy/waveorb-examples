@@ -1,5 +1,3 @@
-const editorToolbar = require('../pages/components/_editor-toolbar.js')
-
 module.exports = async function ($) {
   const host = process.env.NODE_ENV == 'production'
   ? 'https://waveorb.com/api'
