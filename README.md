@@ -23,6 +23,13 @@ npm i -g nodemon
 npm run dev
 ```
 
+### Usage
+
+Add login, signup, reset and contact form to your site:
+```bash
+cp app/pages/{login.js,sent.js,contact.js,settings.js,forgot.js,signup.js} ~/src/your-waveorb-app/app/pages/
+```
+
 Please [report issues here.](https://github.com/eldoy/waveorb/issues)
 
 Created by [Eldøy Projects.](https://eldoy.com)

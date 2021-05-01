@@ -16,7 +16,7 @@ module.exports = async function ($) {
   return /* html */ `
     <div id="page-contact">
       <h1>${$.t('contact.header')}</h1>
-      <form class="support-form" onsubmit="return false">
+      <form class="contact-form" onsubmit="return false">
         <p>
           <label for="email">${$.t('contact.email')}</label>
           <span class="star" title="required">*</span>
