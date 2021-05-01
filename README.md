@@ -27,25 +27,31 @@ npm run dev
 
 Add login, signup, reset, upload and contact form to your app:
 ```bash
-# Copy pages to your client
+scripts/copy.sh ~/src/your-waveorb-app
+```
+
+The script does the following, which you can also do manually to install only what you need:
+```bash
+# Copy pages
 mkdir -p ~/src/your-waveorb-app/app/pages
 cp -n app/pages/{login.js,sent.js,contact.js,settings.js,forgot.js,signup.js,upload.js} ~/src/your-waveorb-app/app/pages
 
-# Copy actions to your api
+# Copy actions
 mkdir -p ~/src/your-waveorb-app/app/actions
 cp -Rvn app/actions/{login,reset,user,contact,upload} ~/src/your-waveorb-app/app/actions
 
-# Copy filters to your api
+# Copy filters
 mkdir -p ~/src/your-waveorb-app/app/filters
 cp -n app/filters/* ~/src/your-waveorb-app/app/filters
 
-# Copy config files to your api
+# Copy config files
 mkdir -p ~/src/your-waveorb-app/app/config
-cp -n app/config/* ~/src/your-waveorb-app/config
+cp -n app/config/* ~/src/your-waveorb-app/app/config
 
 # Copy layouts
 mkdir -p ~/src/your-waveorb-app/app/layouts
 cp -n app/layouts/{default.js,dialog.js} ~/src/your-waveorb-app/app/layouts
+mkdir -p ~/src/your-waveorb-app/app/assets/img
 cp -n app/assets/img/close.svg ~/src/your-waveorb-app/app/assets/img
 
 # Copy translations
